@@ -150,11 +150,7 @@
         y = 0;
         loop = this._currentAttributes.n + majorDiagonalColumnIndexAtFirstRow;
       }
-      console.log(x);
-      console.log(y);
-
       for (var i = 0; i < loop; i++) {
-        console.log(i);
         if (this._currentAttributes[x + i][y + i] === 1) {
           potentialConflicts++;
           if (potentialConflicts > 1) {
@@ -194,13 +190,8 @@
         y = minorDiagonalColumnIndexAtFirstRow - x;
         loop = this._currentAttributes.n - x;
       }
-      console.log(x + ", " + y);
-
       for (var i = 0; i < loop; i++) {
-        console.log(i);
-
         if (this._currentAttributes[x + i][y - i] === 1) {
-          console.log(x + ", " + y);
           potentialConflicts ++;
           if (potentialConflicts > 1) {
             return true;
